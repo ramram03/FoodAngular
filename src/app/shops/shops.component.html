@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="goBack()">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+    </button>
+    <span class="nav-title">Select Your Location</span>
+    
+
+</mat-toolbar>
+<div>  
+  
+  <div class="centered-container">
+    
+    <div class="chip-container">
+       
+          
+        
+    <mat-chip-listbox class="mat-mdc-chip-set-stacked" aria-label="Color selection">
+      <mat-chip-option *ngFor="let chip of availableColors" [color]="chip.color" (click)="onChipSelect(chip.name)">
+        {{chip.name}}
+      </mat-chip-option>
+    </mat-chip-listbox>
+    <div *ngIf="selectedChip" class="button-container">
+        <button mat-raised-button color="primary" (click)="navigateToDifferentPage()">click to visit shops</button>
+      </div>
+   
+
+</div>
+
+  </div>
+</div>
+
+  

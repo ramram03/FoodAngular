@@ -1,0 +1,157 @@
+.nav-bar {
+    width: 100%;
+}
+.example-spacer{
+flex: 1 1 auto;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+      background-color: transparent;
+  }
+  }
+  
+  .form-field {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .success-message {
+    background-color: #d0f0c0;
+    color: #228b22;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #228b22;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .error-message {
+    background-color: #f0c0c0;
+    color: #b22222;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #b22222;
+    border-radius: 4px;
+    text-align: center;
+  }
+ .back-button {
+    margin-right: 10px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the back button */
+ .back-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Active effect for the back button */
+  .back-button:active {
+    background-color: #ccc;
+  }
+  .example-card {
+    background-image: url('C:\Users\linGaes\Downloads\Food_Doodle_Background.png');
+    background-size: cover;
+    background-position: center;
+    height: 700px; /* Set the desired height for the card */
+    
+    
+  }
+  /* registration.component.css */
+
+mat-stepper {
+  width: 400px; /* Set the desired width for the stepper */
+  margin: auto; /* Center the stepper */
+}
+
+mat-step {
+  padding: 20px;
+}
+
+  /* Add your styling here */
+
+/* Center the stepper */
+.mat-stepper-horizontal {
+  justify-content: center;
+}
+
+/* Increase step content width */
+.mat-horizontal-stepper-content {
+  width: 100%; /* Set the width to 100% */
+  max-width: 1200px; /* Set a maximum width if needed */
+  margin: 0 auto;
+  
+}
+.mat-stepper-horizontal {
+  justify-content: center;
+  width: 100%; /* Set the width to 100% */
+  max-width: 1200px; /* Set a maximum width if needed */
+  margin: 0 auto;
+  padding-bottom: 126px;
+  background-color: transparent;
+  
+}
+
+/* Adjust step label alignment */
+.mat-step-header {
+  text-align: center;
+   
+}
+
+/* Center buttons */
+.mat-step-actions {
+  justify-content: center;
+  margin-top: 24px;
+}
+
+/* Center content in last step */
+.mat-step:last-child .mat-step-content {
+  text-align: center;
+}
+
+/* Add space between step label and content */
+.mat-step-header {
+  margin-bottom: 16px;
+  
+
+}
+.mat-horizontal-stepper-header-container {
+  white-space: nowrap;
+  width: 165%;
+  display: flex;
+  align-items: center;
+  height: 92%;
+  margin-top: 0%;
+  margin-bottom: 20%;
+  width:100%;
+  background-image: url('C:\Users\linGaes\Downloads\Food_Doodle_Background.png');
+  background-size: cover;
+    background-position: center;
+    
+}
+
+.mat-toolbar.mat-primary {
+  --mat-toolbar-container-background-color: rgb(137, 27, 27);
+}
+.mat-icon{
+  
+}
