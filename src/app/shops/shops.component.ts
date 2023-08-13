@@ -34,12 +34,15 @@ export class ShopsComponent {
   onChipSelect(chipName: string) {
     this.selectedChip = chipName; // Set the selected chip
   }
+ 
+  
   navigateToDifferentPage() {
     // Add logic to navigate to a different page based on the selected chip
     if (this.selectedChip === 'Chennai') {
       this.router.navigate(['/chennai']);
     } else if (this.selectedChip === 'Noida') {
-      this.router.navigate(['/noida']);
+      console.log("hi");
+      this.router.navigate(['/Noida']);
     } else if (this.selectedChip === 'Bangalore') {
       this.router.navigate(['/bangalore']);
     }

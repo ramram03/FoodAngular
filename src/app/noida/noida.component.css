@@ -1,23 +1,18 @@
-  .grid {
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 20px;
     align-items: stretch;
     padding: 16px;
   }
-/*
+
   .grid  > mat-card {
     width: 200px;
   }
   .grid > mat-card img {
     max-width: 100%;
 
-  } */
-  .card-img{
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-  }
+  } 
 
   .div{
     margin-top: 100px;

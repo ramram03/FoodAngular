@@ -10,13 +10,21 @@ import {  ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
-import {  MatSnackBar } from '@angular/material/snack-bar';
-import {MatSnackBarConfig} from '@angular/material/snack-bar'
+import {  MatSnackBarModule } from '@angular/material/snack-bar';
+//import {MatSnackBarConfig} from '@angular/material/snack-bar'
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 import { ShopsComponent } from './shops/shops.component';
 import {MatChipsModule} from '@angular/material/chips';
 import { ChennaiComponent } from './chennai/chennai.component';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { NoidaComponent } from './noida/noida.component';
+import { BangaloreComponent } from './bangalore/bangalore.component';
+import { HyderabadComponent } from './hyderabad/hyderabad.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -25,7 +33,10 @@ import { MatStepperModule } from '@angular/material/stepper';
     LoginComponent,
     UserComponent,
     ShopsComponent,
-    ChennaiComponent
+    ChennaiComponent,
+    NoidaComponent,
+    BangaloreComponent,
+    HyderabadComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +49,14 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatToolbarModule,
     MatStepperModule,
     MatTooltipModule,
+    MatCardModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    MatSnackBarModule,
+    HttpClientModule,
+  
+    
+ 
     
   ],
   providers: [{provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2500}}],
