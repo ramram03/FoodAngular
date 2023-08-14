@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 //import { HotelService } from '../../services/hotel.service';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { ServiceService } from '../service/service.service';
+import { Location } from '@angular/common';
 import { events } from '@material/tooltip';
 
 @Component({
@@ -11,7 +12,7 @@ import { events } from '@material/tooltip';
 })
 export class BangaloreComponent implements OnInit  {
   constructor(private _hotelService: ServiceService, private route: ActivatedRoute, 
-    private router: Router) { }
+    private router: Router,private location: Location) { }
 
     public hotels = [];
     public hotel;
@@ -20,8 +21,8 @@ export class BangaloreComponent implements OnInit  {
   ngOnInit(): void{
 
     
-    this._hotelService.getHotelsList().subscribe((data) => {
-    //  console.log(data)
+    this._hotelService.getHotelsBanglore().subscribe((data) => {
+      console.log("data",data)
       this.hotels = data;
       this.route.paramMap.subscribe((params: ParamMap) => {
        // [this.hotel] =  this.getHotel(parseInt(params.get('id')));
@@ -34,6 +35,13 @@ export class BangaloreComponent implements OnInit  {
     console.log("cards", Event);
 
   }
+  openHelp(): void{
+
+  }
+
+openContact(): void {
+
+}
   
 /*
    getHotel = (id: number) => {
@@ -45,6 +53,12 @@ export class BangaloreComponent implements OnInit  {
     }
   }
   }*/
+  goBack(): void{
+    this.location.back();
+  }
+
+ 
+  
 
 
 }

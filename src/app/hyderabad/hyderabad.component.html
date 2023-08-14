@@ -1,1 +1,38 @@
-<p>hyderabad works!</p>
+
+<mat-toolbar  color="primary"> 
+  <button mat-icon-button (click)="goBack()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+  <span class="title-center"> Hyderabad Cafeteria</span>
+  <span class="spacer"></span>
+  <button mat-icon-button [matMenuTriggerFor]="helpContactMenu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #helpContactMenu="matMenu">
+    <button mat-menu-item (click)="openHelp()">Help</button>
+    <button mat-menu-item (click)="openContact()">Contact</button>
+  </mat-menu>
+</mat-toolbar>
+
+  <div  class="container responsive-grid">
+    <mat-card  *ngFor="let card of hotels"> 
+      <mat-card-header>
+        
+        <mat-card-title hotelName>{{card.name}}</mat-card-title>
+        <mat-card-subtitle cuisines>{{card.cuisines}}</mat-card-subtitle>
+      </mat-card-header>
+      <img
+                  mat-card-image
+                  [src]="card.feature_image" alt="Card image cap"                 
+                />
+      <mat-card-content>
+        <p>Rating: <span class="rating-star">{{'★'.repeat((card.rating))}}</span></p>
+        <p>Review: {{card.reviews}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+          <!-- {{card.id|json}} -->
+          <button mat-raised-button color="warn" (onclick)="getHotel($event)">View Shop</button>
+      </mat-card-actions>
+    </mat-card>
+    </div>

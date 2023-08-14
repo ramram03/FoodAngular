@@ -10,7 +10,9 @@ import { catchError } from 'rxjs/operators';
 export class ServiceService {
 
   private url: string = '/assets/api/data.json';
-  private url1: string = '/assets/api/ch.json';
+  private url1: string = '/assets/api/chennai.json';
+  private url2: string = '/assets/api/noida.json';
+  private url3: string = '/assets/api/hyd.json';
   public customError = {
     status: 500,
     message: 'Sorry! Something went wrong :('
@@ -18,7 +20,7 @@ export class ServiceService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getHotelsList = (): Observable<IHotel[]> => {
+  public getHotelsBanglore = (): Observable<IHotel[]> => {
     return this.httpClient.get<IHotel[]>(this.url).pipe(
       catchError((err: HttpErrorResponse) => {
         return throwError(err || this.customError);
@@ -26,8 +28,23 @@ export class ServiceService {
     );
   }
 
-  public getHostel1 = (): Observable<IHotel[]> => {
+  public getHostelsChennai = (): Observable<IHotel[]> => {
     return this.httpClient.get<IHotel[]>(this.url1).pipe(
+      catchError((err: HttpErrorResponse) => {
+        return throwError(err || this.customError);
+      })
+    );
+  }
+  public getHotelsNoida = (): Observable<IHotel[]> => {
+    return this.httpClient.get<IHotel[]>(this.url2).pipe(
+      catchError((err: HttpErrorResponse) => {
+        return throwError(err || this.customError);
+      })
+    );
+  }
+
+  public getHostelshyd = (): Observable<IHotel[]> => {
+    return this.httpClient.get<IHotel[]>(this.url3).pipe(
       catchError((err: HttpErrorResponse) => {
         return throwError(err || this.customError);
       })

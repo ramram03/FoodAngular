@@ -1,83 +1,37 @@
-<mat-toolbar  color="primary"> <span class="title-center">Chennai Hotel</span></mat-toolbar>
-<div class="grid">
-  <mat-card class="mat-elevation-z4">
+<mat-toolbar  color="primary">
+  <button mat-icon-button (click)="goBack()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <span class="title-center">Noida Cafeteria</span>
+  <span class="spacer"></span>
+  <button mat-icon-button [matMenuTriggerFor]="helpContactMenu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #helpContactMenu="matMenu">
+    <button mat-menu-item (click)="openHelp()">Help</button>
+    <button mat-menu-item (click)="openContact()">Contact</button>
+  </mat-menu></mat-toolbar>
+
+<div  class="container responsive-grid">
+  <mat-card  *ngFor="let card of hotels"> 
     <mat-card-header>
-      <mat-card-title>KakadaRamprasad</mat-card-title>
-    </mat-card-header>
-    <img
-      mat-card-image
-      src="assets\afternoon-tea.jpg"
-    />
-    <mat-card-content>
-      <p>Mithai, Street Food, North Indian</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="accent">OrderNow</button>
-     
-    </mat-card-actions>
-  </mat-card>
-  <mat-card class="mat-elevation-z4">
-    <mat-card-header>
-      <mat-card-title>National Lodge</mat-card-title>
-    </mat-card-header>
-    <img
-      mat-card-image
-      src="assets/download.jpg"/>
-    <mat-card-content>
-      <p>Andhra, South Indian</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="accent">OrderNow</button>
-   
-    </mat-card-actions>
-  </mat-card>
-  <mat-card class="mat-elevation-z4">
-    <mat-card-header>
-      <mat-card-title>Hotel Krishna</mat-card-title>
-    </mat-card-header>
-    <img
-      mat-card-image
-      src="assets/OIP.jpg"
-    />
-    <mat-card-content>
-      <p>South Indian.</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="accent">OrderNow</button>
-     
-    </mat-card-actions>
-  </mat-card>
-  <mat-card class="mat-elevation-z4">
-    <mat-card-header>
-      <mat-card-title>Board Walk</mat-card-title>
-    </mat-card-header>
-    <img
-      mat-card-image
-      src="assets/R.jpg"
-    />
-    <mat-card-content>
-      <p>North Indian, Continental</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="accent">OrderNow</button>
       
-    </mat-card-actions>
-  </mat-card>
-  <mat-card class="mat-elevation-z4">
-    <mat-card-header>
-      <mat-card-title>Himalayan Peaks</mat-card-title>
+      <mat-card-title hotelName>{{card.name}}</mat-card-title>
+      <mat-card-subtitle cuisines>{{card.cuisines}}</mat-card-subtitle>
     </mat-card-header>
     <img
-      mat-card-image
-      src="assets/rest-rank.jpg"
-    />
+                mat-card-image
+                [src]="card.feature_image" alt="Card image cap"                 
+              />
     <mat-card-content>
-      <p>The Himalayas is a mountain range in Asia.</p>
+      <p>Rating: <span class="rating-star">{{'★'.repeat((card.rating))}}</span></p>
+      <p>Review: {{card.reviews}}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="accent">OrderNow</button>
-      
+       
+        <button mat-raised-button color="warn" (onclick)="getHotel($event)">View Shop</button>
     </mat-card-actions>
   </mat-card>
- 
-</div>
+  </div>
+
+

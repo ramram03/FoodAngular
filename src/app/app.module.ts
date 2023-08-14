@@ -15,15 +15,16 @@ import {  MatSnackBarModule } from '@angular/material/snack-bar';
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 import { ShopsComponent } from './shops/shops.component';
 import {MatChipsModule} from '@angular/material/chips';
-import { ChennaiComponent } from './chennai/chennai.component';
+
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { NoidaComponent } from './noida/noida.component';
-import { BangaloreComponent } from './bangalore/bangalore.component';
+import { BangaloreComponent } from './bangalore/bangalore.component'; 
 import { HyderabadComponent } from './hyderabad/hyderabad.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ChennaiComponent } from './chennai/chennai.component';
 
 
 
@@ -34,6 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     UserComponent,
     ShopsComponent,
     ChennaiComponent,
+   // ChennaiComponent,
     NoidaComponent,
     BangaloreComponent,
     HyderabadComponent

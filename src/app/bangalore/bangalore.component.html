@@ -1,4 +1,17 @@
-<mat-toolbar  color="primary"> <span class="title-center">Bangalore Hotel</span></mat-toolbar>
+<mat-toolbar  color="primary"> 
+  <button mat-icon-button (click)="goBack()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <span class="title-center">Bangalore Cafeteria</span>
+  <span class="spacer"></span>
+  <button mat-icon-button [matMenuTriggerFor]="helpContactMenu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #helpContactMenu="matMenu">
+    <button mat-menu-item (click)="openHelp()">Help</button>
+    <button mat-menu-item (click)="openContact()">Contact</button>
+  </mat-menu>
+</mat-toolbar>
 
     <div  class="container responsive-grid">
       <mat-card  *ngFor="let card of hotels"> 
@@ -16,13 +29,10 @@
           <p>Review: {{card.reviews}}</p>
         </mat-card-content>
         <mat-card-actions>
-            {{card.id|json}}
+            <!-- {{card.id|json}} -->
             <button mat-raised-button color="warn" (onclick)="getHotel($event)">View Shop</button>
         </mat-card-actions>
       </mat-card>
       </div>
- 
-  
-  
  
  
