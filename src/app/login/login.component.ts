@@ -6,6 +6,7 @@ import {MatDialog} from '@angular/material/dialog';
 import {ErrorStateMatcher} from '@angular/material/core';
 import { FormBuilder } from '@angular/forms';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector:'app-login',

@@ -40,6 +40,8 @@ export class BangaloreComponent implements OnInit  {
   }
 
 openContact(): void {
+  this.router.navigate(['/login'], {queryParams: {logout: 'success'}});
+
 
 }
   

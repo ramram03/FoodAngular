@@ -25,6 +25,7 @@ import { BangaloreComponent } from './bangalore/bangalore.component';
 import { HyderabadComponent } from './hyderabad/hyderabad.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ChennaiComponent } from './chennai/chennai.component';
+import { ListComponent } from './list/list.component';
 
 
 
@@ -38,7 +39,8 @@ import { ChennaiComponent } from './chennai/chennai.component';
    // ChennaiComponent,
     NoidaComponent,
     BangaloreComponent,
-    HyderabadComponent
+    HyderabadComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

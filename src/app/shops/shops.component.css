@@ -24,6 +24,9 @@ mat-toolbar {
   }
   .centered-container {
     display: flex;
+    background-image: url('src\assets\Food_Doodle_Background.png');
+    background-size: cover;
+    background-position: center;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -33,6 +36,7 @@ mat-toolbar {
   .chip-container {
     max-width: 600px;
     align-items: center;
+;
     margin-bottom: 20%; /* Set the desired width for the container */
   }
   .button-container {
@@ -41,4 +45,3 @@ mat-toolbar {
     display: flex;
     justify-content: center;
   }
-  

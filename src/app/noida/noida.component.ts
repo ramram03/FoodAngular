@@ -38,5 +38,9 @@ export class NoidaComponent implements OnInit {
   }
   openHelp(): void{}
 
-openContact(): void {}
+openContact(): void {
+  this.router.navigate(['/login'], {queryParams: {logout: 'success'}});
+
+
+}
 }

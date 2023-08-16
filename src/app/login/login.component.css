@@ -53,13 +53,11 @@ width:50%;
    
 }
 .example-card {
-   /* background-image: url('C:\Users\linGaes\Downloads\Food_Doodle_Background.png');*/
+   background-image: url('src\assets\Food_Doodle_Background.png');
     background-size: cover;
     background-position: center;
-    height: 650px; /* Set the desired height for the card */
+    height: 650px; /* Set the desired height for the card src\assets\Food_Doodle_Background.png C:\Users\ramsuratkumar_s\OneDrive - HCL Technologies Ltd\Desktop\HungerboxNew\FoodAngular\src\assets\Food_Doodle_Background.png*/
     
   }
 
 
-
-  
