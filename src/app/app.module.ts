@@ -8,13 +8,15 @@ import {FormsModule} from '@angular/forms';
 import { MatToolbarModule} from '@angular/material/toolbar';
 import {  ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import {MatSelectModule} from '@angular/material/select'
 import { LoginComponent } from './login/login.component';
-import { UserComponent } from './user/user.component';
+import { SignupComponent } from './signup/signup.component';
 import {  MatSnackBarModule } from '@angular/material/snack-bar';
 //import {MatSnackBarConfig} from '@angular/material/snack-bar'
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 import { ShopsComponent } from './shops/shops.component';
 import {MatChipsModule} from '@angular/material/chips';
+import{MatRadioModule} from '@angular/material/radio'
 
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatCardModule } from '@angular/material/card';
@@ -33,7 +35,7 @@ import { ListComponent } from './list/list.component';
   declarations: [
     AppComponent,
     LoginComponent,
-    UserComponent,
+    SignupComponent,
     ShopsComponent,
     ChennaiComponent,
    // ChennaiComponent,
@@ -45,6 +47,8 @@ import { ListComponent } from './list/list.component';
   imports: [
     BrowserModule,
     MatChipsModule,
+    FormsModule,
+    
     BrowserAnimationsModule,
     ReactiveFormsModule,
     CustomMaterialModule,
@@ -58,6 +62,8 @@ import { ListComponent } from './list/list.component';
     FlexLayoutModule,
     MatSnackBarModule,
     HttpClientModule,
+    MatRadioModule,
+    MatSelectModule
   
     
  

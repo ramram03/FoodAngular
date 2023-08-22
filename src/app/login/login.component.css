@@ -61,3 +61,12 @@ width:50%;
   }
 
 
+::ng-deep .empty-field-error{
+  colour: red;
+ 
+ 
+}
+
+.login-button{
+  margin-top:8px;
+}

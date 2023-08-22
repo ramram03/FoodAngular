@@ -1,0 +1,115 @@
+
+<!-- signup.component.html -->
+
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="registration-form">
+  <h2>Registration Form</h2>
+
+  <div class="form-container">
+    <!-- Personal Details -->
+    <div class="details-section">
+      <h3>Personal Details</h3>
+
+      <!-- Name -->
+      <mat-form-field class="form-group">
+        <mat-label>First Name</mat-label>
+        <input matInput type="text" formControlName="fname" required>
+        <!-- <mat-error *ngIf="registrationForm.get('fname').hasError('required')">
+          First Name is required.
+        </mat-error> -->
+
+      </mat-form-field>
+
+      <mat-form-field class="form-group">
+        <mat-label>Last Name</mat-label>
+        <input matInput type="text" formControlName="lname" required>
+        <!-- <mat-error *ngIf="registrationForm.get('lname').hasError('required')">
+          First Name is required.
+        </mat-error> -->
+        
+      </mat-form-field>
+
+      <!-- Contact Number -->
+      <mat-form-field class="form-group">
+        <mat-label>Contact Number</mat-label>
+        <input matInput type="text" formControlName="contactNumber" required>
+        <!-- <mat-error *ngIf="registrationForm.get('contactNumber').hasError('pattern')">
+          Enter a valid 10-digit phone number.
+        </mat-error> -->
+
+      </mat-form-field>
+
+      <!-- Email -->
+      <mat-form-field class="form-group">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" required>
+        <!-- <mat-error *ngIf="registrationForm.get('email').hasError('email')">
+          Enter a valid email address.
+        </mat-error> -->
+
+      </mat-form-field>
+     
+
+      <!-- Gender -->
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <mat-radio-group formControlName="gender" id="gender">
+          <mat-radio-button value="male">Male</mat-radio-button>
+          <mat-radio-button value="female">Female</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </div>
+
+    <!-- Shop Details -->
+    <div class="details-section">
+      <h3>Shop Details</h3>
+
+      <!-- Shop ID -->
+      <mat-form-field class="form-group">
+        <mat-label>Shop ID</mat-label>
+        <input matInput type="text" formControlName="shopId" required>
+      </mat-form-field>
+
+      <!-- Shop Name -->
+      <mat-form-field class="form-group">
+        <mat-label>Shop Name</mat-label>
+        <input matInput type="text" formControlName="shopName" required>
+        <!-- <mat-error *ngIf="registrationForm.get('shopName').hasError('required')">
+          Shop Name is required.
+        </mat-error> -->
+      </mat-form-field>
+
+      <mat-form-field class="form-group">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" required>
+        <!-- <mat-error *ngIf="registrationForm.get('password').hasError('minlength')">
+          Password must be at least 6 characters long.
+        </mat-error> -->
+      </mat-form-field>
+
+      <!-- Confirm Password -->
+      <mat-form-field class="form-group">
+        <mat-label>Confirm Password</mat-label>
+        <input matInput type="password" formControlName="confirmPassword" required>
+        <!-- <mat-error *ngIf="registrationForm.hasError('passwordMismatch')">
+          Passwords do not match.
+        </mat-error> -->
+      </mat-form-field>
+
+
+      <!-- Veg/Non-Veg/Both -->
+      <mat-form-field class="form-group">
+        <mat-label>Veg/Non-Veg</mat-label>
+        <mat-select formControlName="vegNonveg">
+          <mat-option value="veg">Veg</mat-option>
+          <mat-option value="nonveg">Non-Veg</mat-option>
+          <mat-option value="both">Both</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      </div>
+  </div>
+
+  <!-- Submit Button -->
+  <button type="submit" class="submit-button" [disabled]="registrationForm.invalid">Register</button>
+</form>
+
